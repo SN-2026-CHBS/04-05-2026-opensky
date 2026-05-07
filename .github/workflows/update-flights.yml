@@ -30,7 +30,7 @@ jobs:
         env:
           # Para plano gratuito (100 chamadas/mes): use apenas 1 aeroporto
           # Para mais aeroportos, atualize o plano em aviationstack.com
-          AIRPORTS: ${{ vars.AIRPORTS || 'SBCA' 'SBCT''SBFI' }}
+          AIRPORTS: ${{ vars.AIRPORTS || 'SBCA,SBCT,SBFI' }}
           AVIATIONSTACK_KEY: ${{ secrets.AVIATIONSTACK_KEY }}
 
       - name: Commitar JSONs atualizados
